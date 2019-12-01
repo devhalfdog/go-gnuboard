@@ -6,30 +6,19 @@ package main
 
 import (
 	"github.com/labstack/echo"
-	"html/template"
-	"io"
+	"github.com/labstack/echo/middleware"
 )
-
-// TODO -- 디자인은 HTML/CSS/JAVASCRIPT 를 이용할 것.
-// TODO -- 웹에서 쉽게 위젯을 설치, 사용할 수 있게 할 것.
-
-type Template struct {
-	templates *template.Template
-}
-
-func (t *Template) Render(w io.Writer, name string, data interface{}, c echo.Context) error {
-	return t.templates.ExecuteTemplate(w, name, data)
-}
 
 func main() {
 	GG5 := NewConfig()
 
 	e := echo.New()
 
-	renderer := &Template{
-		templates: template.Must(template.ParseGlob("public/*.html")),
+	if GG5.Debug {
+		e.Use(middleware.Logger())
 	}
-	e.Renderer = renderer
+
+	router(e)
 
 	e.Logger.Fatal(e.Start(GG5.Port))
 }

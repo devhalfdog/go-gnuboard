@@ -21,7 +21,9 @@ func (t *Template) Render(w io.Writer, name string, data interface{}, c echo.Con
 	return t.templates.ExecuteTemplate(w, name, data)
 }
 
-func main()  {
+func main() {
+	GG5 := NewConfig()
+
 	e := echo.New()
 
 	renderer := &Template{
@@ -29,5 +31,5 @@ func main()  {
 	}
 	e.Renderer = renderer
 
-	e.Logger.Fatal(e.Start(":80"))
+	e.Logger.Fatal(e.Start(GG5.Port))
 }

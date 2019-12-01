@@ -13,6 +13,7 @@ type GG5S struct {
 	HttpsDomain  string // 보안 도메인 주소, 없다면 공란
 	CookieDomain string // 쿠키 도메인 주소
 	Debug        bool   // 디버깅 모드
+	DB           string // DB 종류. MySQL, MariaDB, PostgreSQL 등등
 	DBEngine     string // 데이터베이스 엔진
 	DBCharset    string // 데이터베이스 문자셋
 	Path         string // 디렉토리 주소
@@ -28,6 +29,7 @@ func NewConfig() *GG5S {
 		HttpsDomain:  "",
 		CookieDomain: "",
 		Debug:        true,
+		DB:           "MySQL",
 		DBEngine:     "",
 		DBCharset:    "utf8mb4",
 		Path:         controller.Path(),

@@ -13,10 +13,10 @@ func Path() string {
 }
 
 // FileExist 함수는 파일이 존재하는 지 확인하는 함수
-func FileExist(path string) (result bool, err error) {
+func FileExist(path string) bool {
 	if _, err := os.Stat(path); err != nil {
-		return true, nil
+		return false // 파일 없음
 	} else {
-		return false, err
+		return true // 파일 있음
 	}
 }

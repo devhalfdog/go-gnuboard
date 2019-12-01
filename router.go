@@ -3,7 +3,11 @@ package main
 import (
 	"github.com/labstack/echo"
 	"html/template"
+	"net/http"
 )
+
+// TODO - RESTful 구현할 것
+// TODO -- 접근 불가능한 폴더는 403 으로 넘길 것.
 
 func router(e *echo.Echo) {
 	renderer := &Template{
@@ -11,6 +15,14 @@ func router(e *echo.Echo) {
 	}
 	e.Renderer = renderer
 
+	e.Static("/", "assets")
+
 	// GET
-	e.GET("/", IndexPage)
+	e.GET("/", IndexPage)          // 인덱스 페이지
+	e.GET("/install", InstallPage) // 인스톨 페이지
+
+	// 접근불가
+	e.GET("/data/dbconfig.json", func(c echo.Context) error {
+		return c.String(http.StatusForbidden, "403 Forbidden")
+	})
 }

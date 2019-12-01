@@ -9,8 +9,10 @@ import (
 	"github.com/labstack/echo/middleware"
 )
 
+var GG5 *GG5S
+
 func main() {
-	GG5 := NewConfig()
+	GG5 = NewConfig()
 
 	e := echo.New()
 

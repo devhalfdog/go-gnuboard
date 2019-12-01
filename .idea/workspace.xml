@@ -1,14 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5441573a-1733-4e93-8ed8-930f1648851e" name="Default Changelist" comment="">
+    <list default="true" id="5441573a-1733-4e93-8ed8-930f1648851e" name="Default Changelist" comment="Push가 되지 않았던 폴더, 파일들 Push&#10;2019/12/02 AM 1:53">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/config.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/data.go" beforeDir="false" afterPath="$PROJECT_DIR$/controller/data.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/error.go" beforeDir="false" afterPath="$PROJECT_DIR$/controller/error.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/file.go" beforeDir="false" afterPath="$PROJECT_DIR$/controller/file.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page.go" beforeDir="false" afterPath="$PROJECT_DIR$/page.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/views/installer.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/views/installer.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -96,6 +90,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="2019/12/01 PM 3:52&#10;config.go 수정" />
     <MESSAGE value="2019/12/01 PM 3:54&#10;server.go 수정" />
     <MESSAGE value="2019/12/01 PM 4:30&#10;오류 수정 및 추후 확장을 위한 수정." />
@@ -103,6 +98,8 @@
     <MESSAGE value="2019/12/01 PM 9:00&#10;인스톨 페이지 추가" />
     <MESSAGE value="2019/12/01 PM 11:23&#10;DBConfig 관련 함수 작성" />
     <MESSAGE value="2019/12/02 AM 12:20&#10;DBConfig 관련 함수 수정 및 작성" />
-    <option name="LAST_COMMIT_MESSAGE" value="2019/12/02 AM 12:20&#10;DBConfig 관련 함수 수정 및 작성" />
+    <MESSAGE value="2019/12/02 AM 1:51&#10;인스톨 관련 수정 및 DBConfig 수정" />
+    <MESSAGE value="Push가 되지 않았던 폴더, 파일들 Push&#10;2019/12/02 AM 1:53" />
+    <option name="LAST_COMMIT_MESSAGE" value="Push가 되지 않았던 폴더, 파일들 Push&#10;2019/12/02 AM 1:53" />
   </component>
 </project>

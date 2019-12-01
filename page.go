@@ -3,6 +3,7 @@ package main
 import (
 	"github.com/labstack/echo"
 	"go-gnuboard/controller"
+	"io/ioutil"
 	"net/http"
 )
 
@@ -24,5 +25,10 @@ func IndexPage(c echo.Context) error {
 
 // InstallPage 함수는 인스톨 페이지를 보여주는 함수
 func InstallPage(c echo.Context) error {
-	return c.Render(http.StatusOK, "installer", "")
+	LicenseTxt, err := ioutil.ReadFile(GG5.Path + "\\public\\LICENSE.txt")
+	controller.ErrorController(err)
+
+	return c.Render(http.StatusOK, "installer", map[string]interface{}{
+		"LicenseTxt": string(LicenseTxt),
+	})
 }

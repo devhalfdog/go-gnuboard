@@ -9,7 +9,7 @@ func Path() string {
 	dir, err := os.Getwd()
 	ErrorController(err)
 
-	return dir
+	return dir + "\\"
 }
 
 // FileExist 함수는 파일이 존재하는 지 확인하는 함수

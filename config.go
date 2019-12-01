@@ -33,6 +33,6 @@ func NewConfig() *GG5S {
 		DBEngine:     "",
 		DBCharset:    "utf8mb4",
 		Path:         controller.Path(),
-		DataFolder:   controller.Path() + "\\data\\",
+		DataFolder:   controller.Path() + "data\\",
 	}
 }

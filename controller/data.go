@@ -62,22 +62,20 @@ type Table struct {
 func CreateDBConfig(path string) bool {
 	if exist := FileExist(path); exist != true {
 		// dbconfig 파일이 없다면
-		file, err := os.OpenFile(
+		_, err := os.OpenFile(
 			path,
 			os.O_CREATE|os.O_RDWR,
 			os.FileMode(0644),
 		)
 		ErrorController(err)
 
-		defer file.Close()
-
-		WriteDBConfig(file)
+		WriteDBConfig(path)
 	}
 	return true
 }
 
 // WriteDBConfig 함수는 dbconfig.json 파일을 작성하는 함수
-func WriteDBConfig(f *os.File) {
+func WriteDBConfig(path string) {
 	// TODO - DBConfig 구조체를 JSON 패키지를 이용해서 data/dbconfig.json 에 작성할 것.
 	dc := make([]DBConfig, 1)
 
@@ -123,6 +121,6 @@ func WriteDBConfig(f *os.File) {
 	doc, err := json.Marshal(dc)
 	ErrorController(err)
 
-	err = ioutil.WriteFile(f, doc, os.FileMode(0644)) // 파일 저장
+	err = ioutil.WriteFile(path, doc, os.FileMode(0644)) // 파일 저장
 	ErrorController(err)
 }

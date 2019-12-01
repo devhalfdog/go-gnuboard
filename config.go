@@ -2,23 +2,27 @@ package main
 
 // TODO -- config.php 를 옮겨둘 것.
 
-var GG5_VERSION string
-var GG5_GNUBOARD_VERSION string
-var GG5_DOMAIN string
-var GG5_HTTPS_DOMAIN string
-var GG5_DEBUG bool
-var GG5_DB_ENGINE string
-var GG5_DB_CHARSET string
+type GG5 struct {
+	Version      string // go-gnuboard 버전
+	Domain       string // 도메인 주소
+	Port         string // 포트 주소
+	HttpsDomain  string // 보안 도메인 주소, 없다면 공란
+	CookieDomain string // 쿠키 도메인 주소
+	Debug        bool   // 디버깅 모드
+	DBEngine     string // 데이터베이스 엔진
+	DBCharset    string // 데이터베이스 문자셋
+}
 
-// config 초기화 함수
-func init() {
-	GG5_VERSION = "Golang 그누보드 5" // 버전
-	GG5_GNUBOARD_VERSION = "0.0.1" // Golang 그누보드 버전
-	GG5_DOMAIN = "" // 도메인 주소
-	GG5_HTTPS_DOMAIN = "" // HTTPS 가 없다면 공란, 있다면 기재할 것.
-	GG5_DEBUG = false // 실제 서버 운영 시에는 false
-	GG5_DB_ENGINE = "" // 데이터베이스 테이블 엔진을 세팅. 만약 MyISAM 혹은 InnoDB 를 원한다면 MyISAM, InnoDB 로 바꿀 것.
-	GG5_DB_CHARSET = "utf8mb4" // 데이터베이스 문자셋 세팅.
-
-
+// NewConfig 함수는 GG5 구조체를 생성하여 반환하는 함수
+func NewConfig() *GG5 {
+	return &GG5{
+		Version:      "Go-Gnuboard Test",
+		Domain:       "localhost",
+		Port:         ":80",
+		HttpsDomain:  "",
+		CookieDomain: "",
+		Debug:        true,
+		DBEngine:     "",
+		DBCharset:    "utf8mb4",
+	}
 }

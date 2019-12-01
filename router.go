@@ -21,6 +21,9 @@ func router(e *echo.Echo) {
 	e.GET("/", IndexPage)          // 인덱스 페이지
 	e.GET("/install", InstallPage) // 인스톨 페이지
 
+	// POST
+	e.POST("/install/1", InstallProcess) // 인스톨 프로세스
+
 	// 접근불가
 	e.GET("/data/dbconfig.json", func(c echo.Context) error {
 		return c.String(http.StatusForbidden, "403 Forbidden")

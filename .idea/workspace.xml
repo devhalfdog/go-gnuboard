@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5441573a-1733-4e93-8ed8-930f1648851e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/process.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conf/app_conf.hjson" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/views/installer.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/views/installer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/router.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/config.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -104,6 +103,7 @@
     <MESSAGE value="2019/12/02 AM 1:51&#10;인스톨 관련 수정 및 DBConfig 수정" />
     <MESSAGE value="Push가 되지 않았던 폴더, 파일들 Push&#10;2019/12/02 AM 1:53" />
     <MESSAGE value="Push가 되지 않았던 폴더, 파일들 Push&#10;2019/12/02 AM 1:55" />
-    <option name="LAST_COMMIT_MESSAGE" value="Push가 되지 않았던 폴더, 파일들 Push&#10;2019/12/02 AM 1:55" />
+    <MESSAGE value="인스톨러 관련 수정&#10;2019/12/02 AM 2:01" />
+    <option name="LAST_COMMIT_MESSAGE" value="인스톨러 관련 수정&#10;2019/12/02 AM 2:01" />
   </component>
 </project>

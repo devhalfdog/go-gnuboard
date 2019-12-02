@@ -1,0 +1,12 @@
+{
+    // Go-Gnuboard 설정 파일
+    Version: "Go-Gnuboard TestVer" // Go-Gnuboard 버전
+    Domain: "localhost" // 도메인 주소
+    Port: "80" // 포트 주소
+    HTTPSDomain: "" // 보안 도메인 주소
+    CookieDomain: "" // 쿠키 도메인 주소
+    Debug: true // 디버깅 모드
+    DB: "MySQL" // 데이터베이스 종류, MySQL, PostgreSQL, SQLlite3, MSSql
+    DBEngine: "" // 데이터베이스 엔진
+    DBCharset: "utf8mb4" // 데이터베이스 문자셋
+}

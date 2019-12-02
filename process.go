@@ -26,5 +26,9 @@ func InstallProcessHeader(next echo.HandlerFunc) echo.HandlerFunc {
 
 // TODO - 인스톨 프로세스 작성할 것.
 func InstallProcess(c echo.Context) error {
+	if agree := c.FormValue("agree"); agree == "" {
+		return c.HTML(http.StatusOK, `<!doctype html><html><head><meta charset="UTF-8"><title>`)
+	}
+
 	return c.String(http.StatusOK, "Test")
 }

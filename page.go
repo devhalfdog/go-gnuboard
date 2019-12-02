@@ -15,7 +15,7 @@ func IndexPage(c echo.Context) error {
 		return c.Render(http.StatusOK, "index", "Hello Go-Gnuboard")
 	} else {
 		// dbconfig.json이 없다면
-		return c.Render(http.StatusOK, "install", map[string]interface{}{
+		return c.Render(http.StatusOK, "install/install.html", map[string]interface{}{
 			"DBConfigFile": GG5.DataFolder + "dbconfig.json",
 			"Version":      GG5.Version,
 			"Domain":       GG5.Domain,
@@ -28,7 +28,7 @@ func InstallPage(c echo.Context) error {
 	LicenseTxt, err := ioutil.ReadFile(GG5.Path + "\\public\\LICENSE.txt")
 	controller.ErrorController(err)
 
-	return c.Render(http.StatusOK, "installer", map[string]interface{}{
+	return c.Render(http.StatusOK, "install/installer", map[string]interface{}{
 		"LicenseTxt": string(LicenseTxt),
 	})
 }

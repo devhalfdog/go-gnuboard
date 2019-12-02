@@ -1,17 +1,13 @@
-{{ define "installer" }}
 
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <title>Go-Gnuboard 설치하기</title>
-    <link rel="stylesheet" href="css/install/install.css">
-</head>
-<body>
-    <div id="ins_bar">
-        <span id="bar_img">Go-Gnuboard</span>
-        <span id="bar_txt">Installation</span>
-    </div>
+    {{ define "head" }}
+        {{ include "install/install_head" }}
+    {{ end }}
+
+    {{ define "navbar" }}
+        {{ include "install/navbar" }}
+    {{ end }}
+
+    {{ define "content" }}
     <form action="/install/1" method="post" onsubmit="return frm_submit(this);">
 
         <div class="ins_inner">
@@ -22,8 +18,8 @@
 
             <div class="ins_ta ins_license">
                 <textarea name="textarea" id="ins_license" readonly>{{ .LicenseTxt }}</textarea>
-            </div>
 
+            </div>
             <div id="ins_agree">
                 <label for="agree">동의합니다.</label>
                 <input type="checkbox" name="agree" value="동의함" id="agree">
@@ -45,6 +41,4 @@
             return true
         }
     </script>
-</body>
-</html>
-{{ end }}
+    {{ end }}

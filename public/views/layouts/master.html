@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ .Title }}</title>
+    {{ template "head" .}}
+</head>
+<body>
+    {{ template "navbar" . }}
+    {{ template "content" .}}
+</body>
+</html>

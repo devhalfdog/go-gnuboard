@@ -1,8 +1,8 @@
 package main
 
 import (
+	echotemplate "github.com/foolin/echo-template"
 	"github.com/labstack/echo"
-	"html/template"
 	"net/http"
 )
 
@@ -10,10 +10,14 @@ import (
 // TODO -- 접근 불가능한 폴더는 403 으로 넘길 것.
 
 func router(e *echo.Echo) {
-	renderer := &Template{
-		templates: template.Must(template.ParseGlob("public/views/*.html")),
+	config := echotemplate.TemplateConfig{
+		Root:         "public/views",
+		Extension:    ".html",
+		Master:       "layouts/master",
+		Partials:     nil,
+		DisableCache: true,
 	}
-	e.Renderer = renderer
+	e.Renderer = echotemplate.New(config)
 
 	e.Static("/", "assets")
 

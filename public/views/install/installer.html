@@ -1,13 +1,12 @@
+{{ define "head" }}
+    {{ include "install/install_head" }}
+{{ end }}
 
-    {{ define "head" }}
-        {{ include "install/install_head" }}
-    {{ end }}
+{{ define "navbar" }}
+    {{ include "install/navbar" }}
+{{ end }}
 
-    {{ define "navbar" }}
-        {{ include "install/navbar" }}
-    {{ end }}
-
-    {{ define "content" }}
+{{ define "content" }}
     <form action="/install/1" method="post" onsubmit="return frm_submit(this);">
 
         <div class="ins_inner">
@@ -41,4 +40,4 @@
             return true
         }
     </script>
-    {{ end }}
+{{ end }}

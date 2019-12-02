@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5441573a-1733-4e93-8ed8-930f1648851e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/kimso.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/config.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/process.go" beforeDir="false" afterPath="$PROJECT_DIR$/process.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -104,6 +106,7 @@
     <MESSAGE value="Push가 되지 않았던 폴더, 파일들 Push&#10;2019/12/02 AM 1:55" />
     <MESSAGE value="인스톨러 관련 수정&#10;2019/12/02 AM 2:01" />
     <MESSAGE value="config 관련 수정 및 추가&#10;2019/12/02 PM 4:19" />
-    <option name="LAST_COMMIT_MESSAGE" value="config 관련 수정 및 추가&#10;2019/12/02 PM 4:19" />
+    <MESSAGE value="config.go 문법 오류 수정&#10;2019/12/02 PM 4:30" />
+    <option name="LAST_COMMIT_MESSAGE" value="config.go 문법 오류 수정&#10;2019/12/02 PM 4:30" />
   </component>
 </project>

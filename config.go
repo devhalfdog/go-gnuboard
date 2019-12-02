@@ -26,9 +26,9 @@ type GG5S struct {
 func NewConfig() *GG5S {
 	var gg5 map[string]interface{}
 
-	confAppFile, err := ioutil.ReadFile(controller.Path() + "data\\app_conf.hjson")
+	confAppFile, err := ioutil.ReadFile(controller.Path() + "conf\\app_conf.hjson")
 	controller.ErrorController(err)
-	if err = hjson.Unmarshal(confAppFile, &gg5); err == nil {
+	if err = hjson.Unmarshal(confAppFile, &gg5); err != nil {
 		panic(err)
 	}
 

@@ -28,7 +28,7 @@ func NewConfig() *GG5S {
 
 	confAppFile, err := ioutil.ReadFile(controller.Path() + "data\\app_conf.hjson")
 	controller.ErrorController(err)
-	if err := hjson.Unmarshal(confAppFile, &gg5); err == nil {
+	if err = hjson.Unmarshal(confAppFile, &gg5); err == nil {
 		panic(err)
 	}
 

@@ -26,6 +26,15 @@ func InstallProcessHeader(next echo.HandlerFunc) echo.HandlerFunc {
 
 // TODO - 인스톨 프로세스 작성할 것.
 func InstallProcess(c echo.Context) error {
+	c.Response().Header().Set("Expires", "0")
+	c.Response().Header().Set(echo.HeaderLastModified, time.Now().Format("Mon, 02 Dec 2019 09:56:15 GMT")) // Mon, 02 Dec 2019 09:56:15 GMT
+	c.Response().Header().Set("Cache-Control", "no-store, no-cache, must-revalidate")
+	c.Response().Header().Set("Cache-Control", "pre-check=0, post-check=0, max-age=0")
+	c.Response().Header().Set("Pragma", "no-cache")
+	c.Response().Header().Set(echo.HeaderContentType, "text/html; charset=utf-8")
+	c.Response().Header().Set("X-Robots-Tag", "noindex")
+	c.Response().WriteHeader(http.StatusOK)
+
 	if agree := c.FormValue("agree"); agree == "" {
 		return c.HTML(http.StatusOK, `<!doctype html><html><head><meta charset="UTF-8"><title>`)
 	}

@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5441573a-1733-4e93-8ed8-930f1648851e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/views/install/install.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/views/install/install.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/views/install/installer.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/views/install/installer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/process.go" beforeDir="false" afterPath="$PROJECT_DIR$/process.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -94,6 +93,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="2019/12/01 PM 3:52&#10;config.go 수정" />
     <MESSAGE value="2019/12/01 PM 3:54&#10;server.go 수정" />
@@ -113,6 +113,7 @@
     <MESSAGE value="Header 작성, 페이지마다 다른 Header 할 수 있게 할 것&#10;2019/12/02 PM 8:53" />
     <MESSAGE value="페이지 템플릿 수정 및 추가&#10;2019/12/02 PM 11:31" />
     <MESSAGE value="페이지 함수 문법 오류 수정&#10;2019/12/02 PM 11:35" />
-    <option name="LAST_COMMIT_MESSAGE" value="페이지 함수 문법 오류 수정&#10;2019/12/02 PM 11:35" />
+    <MESSAGE value="페이지 템플릿 수정&#10;2019/12/02 PM 11:45" />
+    <option name="LAST_COMMIT_MESSAGE" value="페이지 템플릿 수정&#10;2019/12/02 PM 11:45" />
   </component>
 </project>

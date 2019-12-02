@@ -15,7 +15,8 @@ func IndexPage(c echo.Context) error {
 		return c.Render(http.StatusOK, "index", "Hello Go-Gnuboard")
 	} else {
 		// dbconfig.json이 없다면
-		return c.Render(http.StatusOK, "install/install.html", map[string]interface{}{
+		return c.Render(http.StatusOK, "install/install", map[string]interface{}{
+			"Title":        "Go-Gnuboard 설치하기",
 			"DBConfigFile": GG5.DataFolder + "dbconfig.json",
 			"Version":      GG5.Version,
 			"Domain":       GG5.Domain,
@@ -29,6 +30,7 @@ func InstallPage(c echo.Context) error {
 	controller.ErrorController(err)
 
 	return c.Render(http.StatusOK, "install/installer", map[string]interface{}{
+		"Title":      "Go-Gnuboard 설치하기",
 		"LicenseTxt": string(LicenseTxt),
 	})
 }

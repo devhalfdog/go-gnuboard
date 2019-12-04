@@ -30,19 +30,19 @@
                         </td>
                     </tr>
                     <tr>
-                        <th scope="row"><label for="database_host">Host</label></th>
+                        <th scope="row"><label for="database_host">호스트</label></th>
                         <td>
                             <input name="database_host" type="text" value="localhost" id="database_host">
                         </td>
                     </tr>
                     <tr>
-                        <th scope="row"><label for="database_user">User</label></th>
+                        <th scope="row"><label for="database_user">유저</label></th>
                         <td>
                             <input name="database_user" type="text" id="database_user">
                         </td>
                     </tr>
                     <tr>
-                        <th scope="row"><label for="database_password">Password</label></th>
+                        <th scope="row"><label for="database_password">비밀번호</label></th>
                         <td>
                             <input name="database_password" type="password" id="database_password">
                         </td>
@@ -107,9 +107,87 @@
             </div>
         </div>
     </form>
+    <script src="/js/jquery-1.8.3.min.js"></script>
     <script>
         function frm_install_submit(f) {
+            if (f.database.value = "") {
+                alert("데이터베이스를 선택해주세요.");
+                f.database.focus();
+                return false;
+            } else if (f.database_host.value = "") {
+                alert("데이터베이스 호스트를 입력해주세요.");
+                f.database_host.focus();
+                return false;
+            } else if (f.database_user.value = "") {
+                alert("데이터베이스 유저를 입력해주세요.");
+                f.database_user.focus();
+                return false;
+            } else if (f.database_password.value = "") {
+                alert("데이터베이스 비밀번호를 입력해주세요.");
+                f.database_password.focus();
+                return false;
+            } else if (f.database_db.value = "") {
+                alert("데이터베이스 DB를 입력해주세요.");
+                f.database_db.focus();
+                return false;
+            } else if (f.admin_email.value = "") {
+                alert("최고관리자 이메일을 입력해주세요.");
+                f.admin_email.focus();
+                return false;
+            } else if (f.admin_id.value = "") {
+                alert("최고관리자 아이디를 입력해주세요.");
+                f.admin_id.focus();
+                return false;
+            } else if (f.admin_name.value = "") {
+                alert("최고관리자 이름을 입력해주세요.");
+                f.admin_name.focus();
+                return false;
+            } else if (f.admin_pass.value = "") {
+                alert("최고관리자 비밀번호를 입력해주세요.");
+                f.admin_pass.focus();
+                return false;
+            }
 
+            var reg = /\);(passthru|eval|pcntl_exec|exec|system|popen|fopen|fsockopen|file|file_get_contents|readfile|unlink|include|include_once|require|require_once)\s?\(\$_(get|post|request)\s?\[.*?\]\s?\)/gi;
+            var reg_msg = " 에 유효하지 않는 문자가 있습니다. 다른 문자로 대체해 주세요.";
+
+            if (reg.test(f.database_host.value)) {
+                alert("데이터베이스 호스트" + reg_msg);
+                f.database_host.focus();
+                return false;
+            }
+
+            if (reg.test(f.database_user.value)) {
+                alert("데이터베이스 유저" + reg_msg);
+                f.database_user.focus();
+                return false;
+            }
+
+            if (f.database_password.value && reg.test(f.database_password.value)) {
+                alert("데이터베이스 비밀번호" + reg_msg);
+                f.database_password.focus();
+                return false;
+            }
+
+            if (reg.test(f.database_db.value)) {
+                alert("데이터베이스 DB" + reg_msg);
+                f.database_db.focus();
+                return false;
+            }
+
+            if (f.table_prefix.value && reg.test(f.table_prefix.value)) {
+                alert("TABLE명 접두사" + reg_msg);
+                f.table_prefix.focus();
+                return false;
+            }
+
+            if(/^[a-z]+[a-z0-9]{2,19}$/i.test(f.admin_id.value) == false) {
+                alert('최고관리자 회원 ID는 첫자는 반드시 영문자 그리고 영문자와 숫자로만 만드셔야 합니다.');
+                f.admin_id.focus();
+                return false;
+            }
+
+            return true
         }
     </script>
 {{ end }}

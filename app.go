@@ -7,9 +7,11 @@ package main
 import (
 	"github.com/labstack/echo"
 	"github.com/labstack/echo/middleware"
+	"io"
 )
 
 var GG5 *GG5S
+var jaeger io.Closer
 
 func main() {
 	GG5 = NewConfig()

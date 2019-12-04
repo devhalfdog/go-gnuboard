@@ -2,6 +2,7 @@ package main
 
 import (
 	"github.com/labstack/echo"
+	"go-gnuboard/model"
 	"net/http"
 	"time"
 )
@@ -48,6 +49,23 @@ func InstallProcess(c echo.Context) error {
 }
 
 func InstallDBProcess(c echo.Context) error {
-	a := c.FormValue("database")
-	return c.String(http.StatusOK, a)
+	dbData := map[string]string{
+		"Database":    c.FormValue("database"),
+		"Host":        c.FormValue("database_host"),
+		"User":        c.FormValue("database_user"),
+		"Password":    c.FormValue("database_password"),
+		"DB":          c.FormValue("database_db"),
+		"TablePrefix": c.FormValue("table_prefix"),
+	}
+
+	adminData := map[string]string{
+		"ID":       c.FormValue("admin_id"),
+		"Password": c.FormValue("admin_pass"),
+		"Name":     c.FormValue("admin_name"),
+		"Email":    c.FormValue("admin_email"),
+	}
+
+	model.InstallDB(dbData, adminData)
+
+	return c.String(http.StatusOK, "")
 }

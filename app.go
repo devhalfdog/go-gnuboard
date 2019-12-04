@@ -7,14 +7,13 @@ package main
 import (
 	"github.com/labstack/echo"
 	"github.com/labstack/echo/middleware"
-	"io"
+	"go-gnuboard/conf"
 )
 
-var GG5 *GG5S
-var jaeger io.Closer
+var GG5 *conf.GG5S
 
 func main() {
-	GG5 = NewConfig()
+	GG5 = conf.NewConfig()
 
 	e := echo.New()
 	if GG5.Debug {

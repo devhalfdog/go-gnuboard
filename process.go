@@ -35,9 +35,19 @@ func InstallProcess(c echo.Context) error {
 	c.Response().Header().Set("X-Robots-Tag", "noindex")
 	c.Response().WriteHeader(http.StatusOK)
 
-	if agree := c.FormValue("agree"); agree == "" {
-		return c.HTML(http.StatusOK, `<!doctype html><html><head><meta charset="UTF-8"><title>`)
+	if agree := c.FormValue("agree"); agree != "동의함" {
+		return c.HTML(http.StatusOK, `<!doctype html><html><head><meta charset="UTF-8"><title>Go-Gnuboard 설치하기</title>
+		<link rel="stylesheet" href="css/install/install.css"></head><body>
+		<div class="ins_inner"><p>라이센스(License) 내용에 동의하셔야 설치를 계속하실 수 있습니다.</p><div class="inner_btn"><a href="./">뒤로가기</a></div></div>`)
 	}
 
-	return c.String(http.StatusOK, "Test")
+	return c.Render(http.StatusOK, "install/installer1", map[string]interface{}{
+		"Title":   "Go-Gnuboard 설치하기",
+		"Version": GG5.Version,
+	})
+}
+
+func InstallDBProcess(c echo.Context) error {
+	a := c.FormValue("database")
+	return c.String(http.StatusOK, a)
 }

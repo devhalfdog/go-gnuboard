@@ -15,7 +15,6 @@ func main() {
 	GG5 = NewConfig()
 
 	e := echo.New()
-
 	if GG5.Debug {
 		e.Use(middleware.Logger())
 	}

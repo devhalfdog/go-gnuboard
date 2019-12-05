@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5441573a-1733-4e93-8ed8-930f1648851e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/model/model.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.go" beforeDir="false" afterPath="$PROJECT_DIR$/app.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/conf/config.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/install.go" beforeDir="false" afterPath="$PROJECT_DIR$/model/install.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -121,6 +117,7 @@
     <MESSAGE value="Header 를 각 페이지에서 다르게 할 수 있음.&#10;2019/12/02 PM 11:53" />
     <MESSAGE value="인스톨 페이지 완성&#10;2019/12/04 PM 5:50" />
     <MESSAGE value="인스톨 페이지 완성&#10;2019/12/04 PM 11:38" />
-    <option name="LAST_COMMIT_MESSAGE" value="인스톨 페이지 완성&#10;2019/12/04 PM 11:38" />
+    <MESSAGE value="DB 구성중&#10;2019/12/05 AM 12:28" />
+    <option name="LAST_COMMIT_MESSAGE" value="DB 구성중&#10;2019/12/05 AM 12:28" />
   </component>
 </project>

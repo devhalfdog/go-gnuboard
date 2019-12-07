@@ -7,7 +7,6 @@ import (
 )
 
 // TODO - DATA 폴더와 관련된 데이터 컨트롤러 함수는 여기에다가 작성할 것.
-// TODO -- DATA 관련 및 DB 관련 함수들을 추가할 것.
 
 type DBConfig struct {
 	Database Database `json:"Database"` // 데이터베이스
@@ -59,7 +58,7 @@ type Table struct {
 }
 
 // CreateDBConfig 함수는 dbconfig.json 파일이 없으면 생성하는 함수
-func CreateDBConfig(path string) bool {
+func CreateDBConfig(db map[string]string, path string) bool {
 	if exist := FileExist(path); exist != true {
 		// dbconfig 파일이 없다면
 		_, err := os.OpenFile(
@@ -69,23 +68,23 @@ func CreateDBConfig(path string) bool {
 		)
 		ErrorController(err)
 
-		WriteDBConfig(path)
+		WriteDBConfig(db, path)
 	}
 	return true
 }
 
 // WriteDBConfig 함수는 dbconfig.json 파일을 작성하는 함수
-func WriteDBConfig(path string) {
+func WriteDBConfig(db map[string]string, path string) {
 	// TODO - DBConfig 구조체를 JSON 패키지를 이용해서 data/dbconfig.json 에 작성할 것.
 	dc := make([]DBConfig, 1)
 
-	dc[0].Database.Engine = ""
-	dc[0].Database.Host = ""
-	dc[0].Database.Port = ""
-	dc[0].Database.User = ""
-	dc[0].Database.Password = ""
-	dc[0].Database.Table = ""
-	dc[0].Database.TablePrefix = ""
+	dc[0].Database.Engine = db["Database"]
+	dc[0].Database.Host = db["Host"]
+	dc[0].Database.Port = db["Port"]
+	dc[0].Database.User = db["User"]
+	dc[0].Database.Password = db["Password"]
+	dc[0].Database.Table = db["DB"]
+	dc[0].Database.TablePrefix = db["TablePrefix"]
 	dc[0].Table.WritePrefix = dc[0].Database.TablePrefix + "write_"
 	dc[0].Table.Auth = dc[0].Database.TablePrefix + "auth"
 	dc[0].Table.Config = dc[0].Database.TablePrefix + "config"

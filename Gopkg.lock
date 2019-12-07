@@ -55,14 +55,13 @@
   version = "v3.0.1"
 
 [[projects]]
-  digest = "1:f1dffc29f35ca9a24f38bf1be6d10fe85c703b47798a459453ab5d5b5aa42314"
+  digest = "1:35d2120da974b41e049954c5b0524724acfeeebb63108b138d92d0948d8c9aad"
   name = "github.com/jinzhu/gorm"
   packages = [
     ".",
     "dialects/mssql",
     "dialects/mysql",
     "dialects/postgres",
-    "dialects/sqlite",
   ]
   pruneopts = "UT"
   revision = "81c17a7e2529c59efc4e74c5b32c1fb71fb12fa2"
@@ -128,14 +127,6 @@
   pruneopts = "UT"
   revision = "88ba11cfdc67c7588b30042edf244b2875f892b6"
   version = "v0.0.10"
-
-[[projects]]
-  digest = "1:f4d329a16a6f1a7f694148ec7531f85d62cfa6a79bb8200ca612667e40d09923"
-  name = "github.com/mattn/go-sqlite3"
-  packages = ["."]
-  pruneopts = "UT"
-  revision = "590d44c02bca83987d23f6eab75e6d0ddf95f644"
-  version = "v2.0.1"
 
 [[projects]]
   digest = "1:c468422f334a6b46a19448ad59aaffdfc0a36b08fdcc1c749a0b29b6453d7e59"
@@ -224,7 +215,6 @@
     "github.com/jinzhu/gorm/dialects/mssql",
     "github.com/jinzhu/gorm/dialects/mysql",
     "github.com/jinzhu/gorm/dialects/postgres",
-    "github.com/jinzhu/gorm/dialects/sqlite",
     "github.com/labstack/echo",
     "github.com/labstack/echo/middleware",
   ]

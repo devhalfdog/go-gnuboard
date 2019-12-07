@@ -2,7 +2,7 @@ package main
 
 import (
 	"github.com/labstack/echo"
-	"go-gnuboard/model"
+	"go-gnuboard/controller"
 	"net/http"
 	"time"
 )
@@ -58,14 +58,14 @@ func InstallDBProcess(c echo.Context) error {
 		"TablePrefix": c.FormValue("table_prefix"),
 	}
 
-	adminData := map[string]string{
+	_ = map[string]string{
 		"ID":       c.FormValue("admin_id"),
 		"Password": c.FormValue("admin_pass"),
 		"Name":     c.FormValue("admin_name"),
 		"Email":    c.FormValue("admin_email"),
 	}
 
-	model.InstallDB(dbData, adminData)
+	controller.CreateDBConfig(dbData, GG5.DataFolder+"dbconfig.json")
 
 	return c.String(http.StatusOK, "")
 }

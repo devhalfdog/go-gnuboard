@@ -3,6 +3,58 @@
   <component name="ChangeListManager">
     <list default="true" id="5441573a-1733-4e93-8ed8-930f1648851e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gopkg.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gopkg.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/data.go" beforeDir="false" afterPath="$PROJECT_DIR$/controller/data.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/model.go" beforeDir="false" afterPath="$PROJECT_DIR$/model/model.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/process.go" beforeDir="false" afterPath="$PROJECT_DIR$/process.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/views/install/installer1.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/views/install/installer1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/jinzhu/gorm/dialects/sqlite/sqlite.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/.travis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/backup.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/callback.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/convert.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/doc.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/error.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/sqlite3-binding.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/sqlite3-binding.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/sqlite3.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/sqlite3_context.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/sqlite3_func_crypt.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/sqlite3_go18.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/sqlite3_libsqlite3.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/sqlite3_load_extension.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/sqlite3_load_extension_omit.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/sqlite3_opt_allow_uri_authority.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/sqlite3_opt_app_armor.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/sqlite3_opt_foreign_keys.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/sqlite3_opt_fts5.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/sqlite3_opt_icu.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/sqlite3_opt_introspect.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/sqlite3_opt_json1.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/sqlite3_opt_preupdate.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/sqlite3_opt_preupdate_hook.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/sqlite3_opt_preupdate_omit.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/sqlite3_opt_secure_delete.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/sqlite3_opt_secure_delete_fast.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/sqlite3_opt_stat4.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/sqlite3_opt_unlock_notify.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/sqlite3_opt_unlock_notify.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/sqlite3_opt_userauth.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/sqlite3_opt_userauth_omit.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/sqlite3_opt_vacuum_full.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/sqlite3_opt_vacuum_incr.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/sqlite3_opt_vtable.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/sqlite3_other.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/sqlite3_solaris.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/sqlite3_trace.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/sqlite3_type.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/sqlite3_usleep_windows.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/sqlite3_windows.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/sqlite3ext.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/mattn/go-sqlite3/static_mock.go" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,6 +77,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GoDepProject">
+    <integration-enabled>true</integration-enabled>
+    <exec-path>C:\workspace\bin\dep.exe</exec-path>
+  </component>
   <component name="ProjectId" id="1ULTLOt4UFqzosUZcwxGr5M7FPt" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -38,7 +94,9 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="full.screen.before.presentation.mode" value="false" />
     <property name="go.import.settings.migrated" value="true" />
+    <property name="go.tried.to.enable.integration.dep.integrator" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
+    <property name="go.vendoring.notification.had.been.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../discordBot" />
   </component>
   <component name="RecentsManager">
@@ -118,6 +176,7 @@
     <MESSAGE value="인스톨 페이지 완성&#10;2019/12/04 PM 5:50" />
     <MESSAGE value="인스톨 페이지 완성&#10;2019/12/04 PM 11:38" />
     <MESSAGE value="DB 구성중&#10;2019/12/05 AM 12:28" />
-    <option name="LAST_COMMIT_MESSAGE" value="DB 구성중&#10;2019/12/05 AM 12:28" />
+    <MESSAGE value="Vendor 적용&#10;2019/12/05 PM 5:06" />
+    <option name="LAST_COMMIT_MESSAGE" value="Vendor 적용&#10;2019/12/05 PM 5:06" />
   </component>
 </project>

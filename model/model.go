@@ -5,7 +5,6 @@ import (
 	_ "github.com/jinzhu/gorm/dialects/mssql"    // mssql 드라이버 로드
 	_ "github.com/jinzhu/gorm/dialects/mysql"    // mysql 드라이버 로드
 	_ "github.com/jinzhu/gorm/dialects/postgres" // postgresql 드라이버 로드
-	_ "github.com/jinzhu/gorm/dialects/sqlite"   // sqlite 드라이버 로드
 	"go-gnuboard/conf"
 	"go-gnuboard/controller"
 )
@@ -25,6 +24,9 @@ func DBConnect(DBData map[string]string) {
 		db, err = gorm.Open("postgresql", "host="+DBData["Host"]+" port="+
 			DBData["Port"]+" user="+DBData["User"]+" dbname="+DBData["DB"]+
 			" password"+DBData["Password"])
+	} else if DBData["Database"] == "MSSQL" {
+		db, err = gorm.Open("mssql", "sqlserver://"+DBData["User"]+":"+
+			DBData["Password"]+"@"+DBData["Host"]+":"+DBData["Port"]+"?database="+DBData["DB"])
 	}
 
 	controller.ErrorController(err)
